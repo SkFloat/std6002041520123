@@ -2,6 +2,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import Header from './Header';
+import Card  from './Card';
+
 //import Header from '.Header';
 //write
 class App extends React.Component {
@@ -10,9 +12,9 @@ render() {
         //com
             <View>
                 <Header title="Albums" />
-            <   Text style={{ fontSize: 20}}>Saran kuttchanant</Text>
+                <Card />
             </View>
-            );
+            );                        
         }       
     }
 //Export
