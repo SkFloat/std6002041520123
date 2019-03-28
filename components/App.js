@@ -7,7 +7,7 @@ render() {
     return (
         //com
         <View>
-            <Text>Saran kuttchanant</Text>
+            <Text style={{ fontSize: 40}}>Saran kuttchanant</Text>
         </View>
     );
 }
