@@ -1,21 +1,35 @@
-//import
+//import library
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text} from'react-native';
 import Header from './Header';
-import Card  from './Card';
+import Card from './Card';
+import Login from './Login';
+import Me from './Me';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+//write component
 
-//import Header from '.Header';
-//write
-class App extends React.Component {
-render() {
-    return (
-        //com
-            <View>
-                <Header title="Albums" />
-                <Card />
-            </View>
-            );                        
-        }       
+const AppNavigator = createStackNavigator(
+    {
+        Login: Login,
+        Me: Me
+    }, {
+        // initialRouteName: "Login"
+        initialRouteName: "Me"
     }
-//Export
-export default App;
+
+);
+class App extends React.Component {
+    render() {
+        return(
+                <View >
+                    <Header title="Login" />
+                    <Login />
+                </View>
+        );
+    }
+}
+
+
+//export
+
+export default createAppContainer(AppNavigator); 
