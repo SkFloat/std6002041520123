@@ -10,7 +10,7 @@ export default class Login extends React.Component{
         
         title: "Login",
         headerStyle: {
-            backgroundColor: "#8B5927",
+            backgroundColor: "#2E8B57"
         },
         headerTintColor: "white",
         
@@ -61,19 +61,19 @@ export default class Login extends React.Component{
         return(
             <View >
                     <TextInput
-                        style={{ alignItems: 'center' , height:40, fontSize: 20 }}
+                        style={{ alignItems: 'center' , height:40, fontSize: 20, margin: 10 }}
                         placeholder="Email"
                         value={this.state.email}
                         onChangeText={(text) => this.setState({ email: text })}
                     />
                     <TextInput
                         secureTextEntry
-                        style={{ height:40, fontSize: 20 }}
+                        style={{ height:40, fontSize: 20, margin: 10  }}
                         placeholder="Password"
                         value={this.state.password}
                         onChangeText={(text) => this.setState({ password: text })}
                     />
-                    <Button title="Login" color = "#8B5927" onPress={this.goLogin.bind(this)} />
+                    <Button title="Login" color = "#66CDAA" onPress={this.goLogin.bind(this)} />
             </View>
         );
     }
